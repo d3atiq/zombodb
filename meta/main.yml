@@ -1,4 +1,4 @@
-laxy_info:
+galaxy_info:
   author: Douglas Atique
   description: An Ansible role to install zombodb on a Ubuntu server. 
   license: MIT
