@@ -1,0 +1,14 @@
+---
+# tasks file for zombodb
+
+- name: Install zombodb support packages
+  become: true
+  apt:
+    name: libcurl3
+    state: present
+
+- name: Install zombodb apt package
+  become: true
+  apt:
+    deb: "https://www.zombodb.com/releases/v{{ zombodb_version }}/zombodb_{{ ansible_distribution_release }}_pg10-{{ zombodb.version }}_amd64.deb"
+    state: present
